@@ -1,3 +1,6 @@
+// isSpecodecModel is exported for use by emitters in TypeScript code.
+// $specodec is NOT re-exported here — it is registered by TypeSpec via lib/main.tsp import.
+export { isSpecodecModel } from "./state.js";
 export const RESERVED_KEYWORDS = {
     python: new Set([
         "False", "None", "True", "and", "as", "assert", "async", "await",

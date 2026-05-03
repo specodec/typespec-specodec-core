@@ -1,3 +1,4 @@
+export { isSpecodecModel } from "./state.js";
 export declare const RESERVED_KEYWORDS: {
     python: Set<string>;
     dart: Set<string>;
