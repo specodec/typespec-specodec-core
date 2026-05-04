@@ -2,7 +2,7 @@
   "name": "@specodec/typespec-emitter-core",
   "version": "0.1.0",
   "type": "module",
-  "main": "src/index.ts",
+  "main": "dist/index.js",
   "exports": {
     ".": {
       "typespec": "./src/index.ts",
@@ -15,5 +15,10 @@
   "devDependencies": {
     "@typespec/compiler": "1.11.0",
     "typescript": "^5.7.0"
-  }
+  },
+  "scripts": {
+    "prepare": "npm run build",
+    "build": "tsc"
+  },
+  "types": "dist/index.d.ts"
 }
