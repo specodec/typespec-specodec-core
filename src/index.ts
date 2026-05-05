@@ -13,7 +13,6 @@ import {
   Scalar,
   Diagnostic,
   listServices,
-  navigateTypesInNamespace,
 } from "@typespec/compiler";
 
 // ─── Base emitter options (shared by all emitters) ────────────────────────────
@@ -39,16 +38,11 @@ export function collectServices(program: Program): ServiceInfo[] {
 
   function collectDirectModels(ns: Namespace): Model[] {
     const models: Model[] = [];
-    const seen = new Set<string>();
-    navigateTypesInNamespace(ns, {
-      model: (m: Model) => {
-        if (m.namespace !== ns) return;
-        if (!m.name || seen.has(m.name)) return;
-        if (!isSpecodecModel(program, m)) return;
-        seen.add(m.name);
-        models.push(m);
-      },
-    });
+    for (const [, type] of ns.models) {
+      if (type.kind === "Model" && type.name && isSpecodecModel(program, type)) {
+        models.push(type as Model);
+      }
+    }
     return models;
   }
 
