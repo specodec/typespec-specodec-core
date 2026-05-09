@@ -1,6 +1,6 @@
 {
   "name": "@specodec/typespec-emitter-core",
-  "version": "0.1.13",
+  "version": "0.1.16",
   "type": "module",
   "main": "dist/index.js",
   "tspMain": "lib/main.tsp",
