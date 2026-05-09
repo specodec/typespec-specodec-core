@@ -2,10 +2,6 @@ import "../dist/decorators.js";
 
 using TypeSpec.Reflection;
 
-namespace Specodec.Core;
+namespace Specodec;
 
-/**
- * Mark a model to be included in specodec code generation.
- * Only models decorated with `@specodec` will be emitted.
- */
-extern dec specodec(target: Model);
+extern dec codec(target: Model | Enum | Union);

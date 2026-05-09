@@ -1,11 +1,13 @@
 {
   "name": "@specodec/typespec-emitter-core",
-  "version": "0.1.2",
+  "version": "0.1.13",
   "type": "module",
   "main": "dist/index.js",
+  "tspMain": "lib/main.tsp",
   "exports": {
     ".": {
       "typespec": "./lib/main.tsp",
+      "types": "./dist/index.d.ts",
       "import": "./dist/index.js",
       "default": "./dist/index.js"
     },
@@ -23,5 +25,8 @@
     "prepare": "npm run build",
     "build": "tsc"
   },
-  "types": "dist/index.d.ts"
+  "types": "dist/index.d.ts",
+  "publishConfig": {
+    "registry": "http://10.199.64.20:3000/api/packages/specodec/npm/"
+  }
 }
