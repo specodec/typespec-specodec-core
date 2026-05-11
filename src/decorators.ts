@@ -6,5 +6,3 @@ export const namespace = "Specodec";
 export function $codec(context: DecoratorContext, target: Model | Enum | Union): void {
   context.program.stateSet(codecKey).add(target);
 }
-
-export { $specodec } from "./backcompat.js";
