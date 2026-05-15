@@ -1,6 +1,6 @@
 {
   "name": "@specodec/typespec-emitter-core",
-  "version": "0.1.17",
+  "version": "0.1.18",
   "type": "module",
   "main": "dist/index.js",
   "tspMain": "lib/main.tsp",
@@ -15,10 +15,10 @@
     "./lib/main.tsp": "./lib/main.tsp"
   },
   "dependencies": {
-    "@typespec/compiler": "^1.11.0"
+    "@typespec/compiler": "^1.12.0"
   },
   "devDependencies": {
-    "@typespec/compiler": "1.11.0",
+    "@typespec/compiler": "^1.12.0",
     "typescript": "^5.7.0"
   },
   "scripts": {
